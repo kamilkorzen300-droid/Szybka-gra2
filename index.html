@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="theme-color" content="#101827">
+<title>Strzelanka pod magazynami</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="game"></div>
+
+<section id="lobby" class="screen">
+  <h1>STRZELANKA<br>POD MAGAZYNAMI</h1>
+
+  <div class="profile">
+    <div class="avatar" id="avatar">🪖</div>
+    <div>
+      <h2 id="playerName">Gracz</h2>
+      <p>Poziom <span id="playerLevel">1</span></p>
+    </div>
+    <div class="coins">🪙 <span id="lobbyCoins">0</span></div>
+  </div>
+
+  <div class="character">
+    <div id="characterPreview">🪖</div>
+    <p id="skinName">Niebieski żołnierz</p>
+  </div>
+
+  <button id="playBtn">▶ GRAJ</button>
+
+  <div class="menuButtons">
+    <button id="skinsBtn">👕 SKINY</button>
+    <button id="shopBtn">🛒 SKLEP</button>
+    <button id="passBtn">🎁 BATTLE PASS</button>
+    <button id="statsBtn">📊 STATYSTYKI</button>
+  </div>
+</section>
+
+<section id="maps" class="screen hidden">
+  <h1>WYBIERZ MAPĘ</h1>
+  <button data-map="warehouse">🏭 Magazyny</button>
+  <button data-map="city">🏙️ Miasto</button>
+  <button data-map="desert">🏜️ Pustynia</button>
+  <button data-map="base">🪖 Baza</button>
+  <button class="backBtn">WRÓĆ</button>
+</section>
+
+<section id="skins" class="screen hidden">
+  <h1>WYBIERANIE SKINÓW</h1>
+  <div id="skinItems"></div>
+  <button class="backBtn">WRÓĆ</button>
+</section>
+
+<section id="shop" class="screen hidden">
+  <h1>SKLEP</h1>
+  <p>🪙 <span id="shopCoins">0</span></p>
+  <div id="shopItems"></div>
+  <button class="backBtn">WRÓĆ</button>
+</section>
+
+<section id="battlepass" class="screen hidden">
+  <h1>🎁 BATTLE PASS</h1>
+  <p>Postęp: <span id="passLevel">1</span>/50</p>
+  <div class="progress"><div id="passProgress"></div></div>
+  <div id="passItems"></div>
+  <button class="backBtn">WRÓĆ</button>
+</section>
+
+<section id="stats" class="screen hidden">
+  <h1>STATYSTYKI</h1>
+  <p>Poziom: <span id="statLevel">1</span></p>
+  <p>Pokonani przeciwnicy: <span id="kills">0</span></p>
+  <p>Najlepsza fala: <span id="bestWave">0</span></p>
+  <p>Monety: <span id="statCoins">0</span></p>
+  <button class="backBtn">WRÓĆ</button>
+</section>
+
+<section id="pause" class="screen hidden">
+  <h1>PAUZA</h1>
+  <button id="resumeBtn">WRÓĆ DO GRY</button>
+  <button id="pauseMenuBtn">MENU</button>
+</section>
+
+<section id="gameOver" class="screen hidden">
+  <h1>KONIEC GRY</h1>
+  <p>Fala: <span id="finalWave">1</span></p>
+  <button id="againBtn">ZAGRAJ PONOWNIE</button>
+  <button id="overMenuBtn">MENU</button>
+</section>
+
+<div id="hud" class="hidden">
+  <div class="topbar">
+    <span>❤️ <b id="hp">100</b></span>
+    <span>🌊 <b id="wave">1</b>/50</span>
+    <span>🪙 <b id="coins">0</b></span>
+    <span>🔫 <b id="ammo">30</b></span>
+    <button id="pauseBtn">Ⅱ</button>
+  </div>
+  <div id="crosshair">+</div>
+  <div id="message"></div>
+
+  <div id="mobileControls">
+    <div id="joystick"><div id="stick"></div></div>
+    <button id="fireBtn">FIRE</button>
+    <button id="reloadBtn">R</button>
+    <button id="jumpBtn">↑</button>
+  </div>
+</div>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
